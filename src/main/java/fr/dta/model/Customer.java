@@ -3,6 +3,8 @@ package fr.dta.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.Email;
+
 @Entity
 public class Customer {
 	
@@ -11,9 +13,12 @@ public class Customer {
 	private String firstname;
 	private String lastname;
 	private String title;
+	
+	@Email
 	private String email;
-	private String adress;
+	private String address;
 	private String country;
+	
 	public Long getId() {
 		return id;
 	}
@@ -44,11 +49,11 @@ public class Customer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getCountry() {
 		return country;
